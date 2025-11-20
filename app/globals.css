@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-gray-900 antialiased;
+}
+
+input, textarea, select {
+  @apply border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent;
+}
+
+button.primary {
+  @apply bg-accent-600 text-white px-4 py-2 rounded-lg hover:bg-accent-500 transition shadow-sm;
+}
+
+button.secondary {
+  @apply text-accent-600 border border-accent-100 bg-accent-50 px-4 py-2 rounded-lg hover:bg-accent-100 transition;
+}
