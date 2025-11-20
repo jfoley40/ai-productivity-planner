@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum GuestStatus {
+  NEW
+  NEEDS_REVIEW
+  APPROVED
+  SCHEDULED
+  RECORDED
+  PUBLISHED
+  REJECTED
+  DO_NOT_BOOK
+}
+
+model Guest {
+  id             String      @id @default(cuid())
+  name           String
+  email          String
+  website        String?
+  social         String?
+  topic          String
+  story          String
+  takeaway       String
+  headshotUrl    String?
+  hasGear        Boolean     @default(false)
+  agreeToRelease Boolean     @default(false)
+  status         GuestStatus @default(NEW)
+  notes          String?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
