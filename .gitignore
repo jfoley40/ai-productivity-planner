@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Generated podcast search output files
+podcast_search_*.json
+podcast_search_*.csv
+startup_podcasts.*
+top_productivity_podcasts.*
+ai_podcasts.*
+
+# OS files
+.DS_Store
+Thumbs.db
